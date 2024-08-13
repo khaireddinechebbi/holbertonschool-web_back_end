@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+"""
+This script take a list of floats and retun thier sum
+"""
 from typing import List
 
 
