@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-This script defines a function that returns the string representation of a float.
+This script defines a function that returns the string \
+representation of a float.
 """
 
 
