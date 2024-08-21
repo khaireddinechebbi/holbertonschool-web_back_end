@@ -13,10 +13,6 @@ Classes:
 Functions:
     index_range(page: int, page_size: int) -> Tuple[int, int]:
         Calculate start and end index for pagination.
-
-Usage Example:
-    server = Server()
-    page_data = server.get_page(1, 10)  # Gets the first 10 records.
 """
 import csv
 import math
@@ -55,11 +51,9 @@ class Server:
             List[List]: The list of rows for the specified page.
         """
         assert isinstance(
-            page, int) and page > 0,
-        "page must be a positive integer"
+            page, int) and page > 0
         assert isinstance(
-            page_size, int) and page_size > 0,
-        "page_size must be a positive integer"
+            page_size, int) and page_size > 0
         start_index, end_index = index_range(page, page_size)
         dataset = self.dataset()
         if start_index >= len(dataset):
