@@ -51,8 +51,8 @@ class Server:
         Returns:
             Dict[str, Any]: A dictionary with the pagination information.
         """
-        assert isinstance(index, int) and\
-        0 <= index < len(self.indexed_dataset())
+        assert isinstance(index, int) \
+            and 0 <= index < len(self.indexed_dataset())
 
         dataset = self.indexed_dataset()
         data = []
