@@ -3,19 +3,12 @@
 Module for listing all documents in a MongoDB collection.
 """
 
-from typing import List, Dict
-from pymongo.collection import Collection
 
-
-def list_all(mongo_collection: Collection) -> List[Dict]:
+def list_all(mongo_collection):
     """
     Lists all documents in a MongoDB collection.
-
     Args:
-        mongo_collection (Collection): The pymongo collection object.
-
-    Returns:
-        List[Dict]: A list of dictionaries representing all documents \
-        in the collection.
+        mongo_collection (Collection): collection object.
     """
-    return list(mongo_collection.find())
+    documents = mongo_collection.find()
+    return documents
