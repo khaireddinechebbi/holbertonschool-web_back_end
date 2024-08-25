@@ -18,4 +18,4 @@ def list_all(mongo_collection: Collection) -> List[Dict]:
         List[Dict]: A list of dictionaries representing all documents \
         in the collection.
     """
-    return list(mongo_collection.find())
+    return List(mongo_collection.find())
